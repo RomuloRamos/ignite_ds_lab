@@ -1,5 +1,4 @@
 import * as CheckboxPrimitive from '@radix-ui/react-checkbox'
-import {clsx} from 'clsx';
 import { Check } from 'phosphor-react';
 
 export interface CheckboxProps {
