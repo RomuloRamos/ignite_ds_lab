@@ -10,5 +10,8 @@ const config: StorybookConfig = {
   core: {
     builder: '@storybook/builder-vite',
   },
+  features: {
+    "storyStoreV7": true
+  }
 };
 export default config;
