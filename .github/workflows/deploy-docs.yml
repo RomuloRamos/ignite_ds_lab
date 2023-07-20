@@ -3,8 +3,12 @@ name: Deploy Storybook
 on: 
   push:
     branches:
-      -Master
-
+      - Master
+  
+  pull_request:
+    branches:
+      - Master
+  
 jobs:
   build-and-depoy:
     runs-on: ubuntu-latest
