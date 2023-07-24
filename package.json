@@ -15,6 +15,7 @@
   "dependencies": {
     "@radix-ui/react-checkbox": "^1.0.4",
     "@radix-ui/react-slot": "^1.0.2",
+    "@storybook/addon-a11y": "^7.1.0",
     "@storybook/storybook-deployer": "^2.8.16",
     "clsx": "^2.0.0",
     "phosphor-react": "^1.4.1",
