@@ -1,14 +1,24 @@
 import { Preview } from "@storybook/react";
 import { themes } from '@storybook/theming'
-import { initialize, mswLoader } from 'msw-storybook-addon';
+import { InitializeOptions, initialize, mswLoader } from 'msw-storybook-addon';
 
 import '../src/styles/global.css'
 
+
+let options: InitializeOptions = {
+  onUnhandledRequest:'bypass'  
+}
+
+if(location.hostname === 'romuloramos.github.io') {
+  options = {...options,
+    serviceWorker:{
+      url:"ignite_ds_lab/mockServiceWorker.js"
+    } 
+  }
+}
  
 // Initialize MSW
-initialize({
-  onUnhandledRequest:'bypass'
-});
+initialize(options);
 
 const preview:Preview = {
   parameters: {
