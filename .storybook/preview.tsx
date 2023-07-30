@@ -12,7 +12,7 @@ let options: InitializeOptions = {
 if(location.hostname === 'romuloramos.github.io') {
   options = {...options,
     serviceWorker:{
-      url:"ignite_ds_lab/mockServiceWorker.js"
+      url:"mockServiceWorker.js"
     } 
   }
 }
