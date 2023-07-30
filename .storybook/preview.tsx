@@ -9,10 +9,10 @@ let options: InitializeOptions = {
   onUnhandledRequest:'bypass'  
 }
 
-if(location.hostname === 'romuloramos.github.io') {
+if(location.hostname === 'https://romuloramos.github.io') {
   options = {...options,
     serviceWorker:{
-      url:"mockServiceWorker.js"
+      url:"https://romuloramos.github.io/ignite_ds_lab/mockServiceWorker.js"
     } 
   }
 }
