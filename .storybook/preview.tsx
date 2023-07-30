@@ -1,7 +1,14 @@
 import { Preview } from "@storybook/react";
 import { themes } from '@storybook/theming'
+import { initialize, mswLoader } from 'msw-storybook-addon';
 
 import '../src/styles/global.css'
+
+ 
+// Initialize MSW
+initialize({
+  onUnhandledRequest:'bypass'
+});
 
 const preview:Preview = {
   parameters: {
@@ -19,20 +26,13 @@ const preview:Preview = {
       default: 'Dark',
       values: [
         {
-          name: 'twitter',
-          value: '#00aced',
-        },
-        {
-          name: 'facebook',
-          value: '#3b5998',
-        },
-        {
           name: 'Dark',
           value: '#000000',
-        },
+        }
       ],
     },
   },
+  loaders: [mswLoader],
 };
 
 export default preview;
