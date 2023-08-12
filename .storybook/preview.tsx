@@ -10,24 +10,22 @@ let options: InitializeOptions = {
   onUnhandledRequest:'bypass'  
 }
 
-if(location.hostname === 'https://romuloramos.github.io') {
-  options = {...options,
-    serviceWorker:{
-      url:"https://romuloramos.github.io/ignite_ds_lab/mockServiceWorker.js"
-    } 
-  }
-  console.log("Agora é server")
+if(location.hostname === 'romuloramos.github.io') {
+  // options = {...options,
+  //   serviceWorker:{
+  //     url:"https://romuloramos.github.io/ignite_ds_lab/mockServiceWorker.js"
+  //   } 
+  // }
+  console.log("Não é server, é local: ",location, options)
 }
 else{
   const worker = setupWorker()
 
-  // worker.start({
-  //   serviceWorker: {
-  //     // Points to the custom location of the Service Worker file.
-  //     url: '/assets/mockServiceWorker.js'
-  //   }
-  // })
-  console.log("Não é server, é local: ",location)
+  // options = {...options,
+  //   serviceWorker:{
+  //     url:"https://romuloramos.github.io/ignite_ds_lab/mockServiceWorker.js"
+  //   } 
+  console.log("Não é server, é local: ",location, options)
 }
  
 // Initialize MSW
