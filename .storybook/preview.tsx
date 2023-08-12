@@ -3,24 +3,20 @@ import { themes } from '@storybook/theming'
 import { InitializeOptions, initialize, mswLoader } from 'msw-storybook-addon';
 
 import '../src/styles/global.css'
-import { setupWorker } from "msw";
-
 
 let options: InitializeOptions = {
   onUnhandledRequest:'bypass'  
 }
 
-console.log("Valor antes da comparação: ",location.hostname)
 if(location.hostname === "romuloramos.github.io") {
   options = {...options,
     serviceWorker:{
       url:"https://romuloramos.github.io/ignite_ds_lab/mockServiceWorker.js"
     } 
   }
-  console.log("Está no server: ",location, options)
 }
 else{
-  console.log("Não é server, é local: ",location, options)
+
 }
  
 // Initialize MSW
