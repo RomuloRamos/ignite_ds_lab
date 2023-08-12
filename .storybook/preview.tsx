@@ -12,20 +12,14 @@ let options: InitializeOptions = {
 
 console.log("Valor antes da comparação: ",location.hostname)
 if(location.hostname === "romuloramos.github.io") {
-  // options = {...options,
-  //   serviceWorker:{
-  //     url:"https://romuloramos.github.io/ignite_ds_lab/mockServiceWorker.js"
-  //   } 
-  // }
-  console.log("Não é server, é local: ",location, options)
+  options = {...options,
+    serviceWorker:{
+      url:"https://romuloramos.github.io/ignite_ds_lab/mockServiceWorker.js"
+    } 
+  }
+  console.log("Está no server: ",location, options)
 }
 else{
-  const worker = setupWorker()
-
-  // options = {...options,
-  //   serviceWorker:{
-  //     url:"https://romuloramos.github.io/ignite_ds_lab/mockServiceWorker.js"
-  //   } 
   console.log("Não é server, é local: ",location, options)
 }
  
