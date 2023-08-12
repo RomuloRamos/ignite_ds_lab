@@ -27,7 +27,7 @@ else{
   //     url: '/assets/mockServiceWorker.js'
   //   }
   // })
-  console.log("Não é server, é local")
+  console.log("Não é server, é local: ",location)
 }
  
 // Initialize MSW
