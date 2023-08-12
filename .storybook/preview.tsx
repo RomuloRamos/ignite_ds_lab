@@ -10,7 +10,8 @@ let options: InitializeOptions = {
   onUnhandledRequest:'bypass'  
 }
 
-if(location.hostname === 'romuloramos.github.io') {
+console.log("Valor antes da comparação: ",location.hostname)
+if(location.hostname === "romuloramos.github.io") {
   // options = {...options,
   //   serviceWorker:{
   //     url:"https://romuloramos.github.io/ignite_ds_lab/mockServiceWorker.js"
